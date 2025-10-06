@@ -183,6 +183,18 @@ class ConsoleUI:
         self._booking_system.view_bookings()
     
     def handle_cancel_booking(self):
+        if not self._booking_system._bookings:
+            print("\n📭 No bookings found to cancel.")
+            return
+            
+        # Show all bookings first
+        print(f"\n{'='*60}")
+        print("📋 YOUR BOOKINGS - Select ID to Cancel:")
+        print(f"{'='*60}")
+        for booking in self._booking_system._bookings:
+            print(f"ID: {booking.get_booking_id()} | {booking.get_passenger_name()} | {booking.get_flight().get_flight_number()} | {booking.get_flight().get_origin()} → {booking.get_flight().get_destination()}")
+        print(f"{'='*60}")
+        
         try:
             booking_id = int(input("\nEnter Booking ID to cancel: "))
             self._booking_system.cancel_booking(booking_id)
