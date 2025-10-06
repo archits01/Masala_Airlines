@@ -19,6 +19,9 @@ class Booking:
     def get_passenger_name(self):
         return self._passenger_name
     
+    def get_flight(self):
+        return self._flight
+    
     def display_booking(self):
         print(f"\n{'='*60}")
         print(f"Booking ID: {self._booking_id}")
