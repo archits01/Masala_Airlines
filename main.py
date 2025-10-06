@@ -1,6 +1,9 @@
 from booking import BookingSystem
 from flights import NormalFlight, RedEyeFlight
-from ui import ConsoleUI
+from qt_ui import MasalaAirlinesApp
+
+import sys
+from PyQt5.QtWidgets import QApplication
 
 def main():
     # Create booking system
@@ -31,9 +34,11 @@ def main():
     system.add_flight(RedEyeFlight("SJ209", "Pune", "Jaipur", 1100, 3.0))
     system.add_flight(RedEyeFlight("SJ210", "Jaipur", "Ahmedabad", 650, 3.3))
     
-    # Start UI
-    ui = ConsoleUI(system)
-    ui.start()
+    # Start UI using PyQt
+    app = QApplication(sys.argv)
+    ui = MasalaAirlinesApp(system)
+    ui.show()
+    sys.exit(app.exec_())
 
 if __name__ == "__main__":
     main()
