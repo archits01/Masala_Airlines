@@ -1,4 +1,4 @@
-# MASALA AIRLINES Flight Booking System
+# Masala Airlines Flight Booking System
 
 A modular Python application for airline ticket booking with a console-based interface.
 
