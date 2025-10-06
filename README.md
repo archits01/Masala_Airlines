@@ -1,4 +1,4 @@
-# MASALA AIRLINES Flight Booking System
+# Masala Airlines Flight Booking System
 
 A modular Python application for airline ticket booking with a console-based interface.
 
@@ -43,7 +43,7 @@ python3 main.py
 - Book tickets with seat selection
 - Multiple booking categories (First, Business, Economy)
 - View and cancel bookings
-- Interactive console interface
+- Interactive graphical user interface
 
 ## 🎯 Flight Types
 
